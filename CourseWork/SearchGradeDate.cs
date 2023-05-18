@@ -55,7 +55,7 @@ namespace CourseWork
 
             string connectionString = ConfigurationManager.ConnectionStrings["CourseWork.Properties.Settings.DayCareConnectionString"].ConnectionString;
 
-            string query =  "SELECT Children.FirstName + ' ' + Children.LastName as Име " +
+            string query = "SELECT Children.FirstName as 'Име' , Children.LastName as 'Фамилия' , Children.Age as 'Години' " +
                             "FROM Children INNER JOIN Attendance ON Attendance.ChildID = Children.id " +
                             "WHERE Attendance.Date = @date AND Children.Grade = @grade";
 

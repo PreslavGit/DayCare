@@ -35,28 +35,31 @@
             // 
             // calAttendData
             // 
-            this.calAttendData.Location = new System.Drawing.Point(55, 18);
+            this.calAttendData.BackColor = System.Drawing.Color.GhostWhite;
+            this.calAttendData.Location = new System.Drawing.Point(64, 71);
             this.calAttendData.Name = "calAttendData";
             this.calAttendData.TabIndex = 0;
-            this.calAttendData.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calAttendData_DateChanged);
+            this.calAttendData.TitleBackColor = System.Drawing.Color.NavajoWhite;
+            this.calAttendData.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calAttendData_DateSelected);
             // 
             // dgAttendData
             // 
             this.dgAttendData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAttendData.Location = new System.Drawing.Point(55, 192);
+            this.dgAttendData.Location = new System.Drawing.Point(331, 24);
             this.dgAttendData.Name = "dgAttendData";
-            this.dgAttendData.Size = new System.Drawing.Size(220, 244);
+            this.dgAttendData.Size = new System.Drawing.Size(246, 273);
             this.dgAttendData.TabIndex = 1;
             // 
-            // AttendanceData
+            // AttendanceDate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 450);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(614, 321);
             this.Controls.Add(this.dgAttendData);
             this.Controls.Add(this.calAttendData);
-            this.Name = "AttendanceData";
-            this.Text = "AttendanceData";
+            this.Name = "AttendanceDate";
+            this.Text = "Присъствия по дни";
             ((System.ComponentModel.ISupportInitialize)(this.dgAttendData)).EndInit();
             this.ResumeLayout(false);
 

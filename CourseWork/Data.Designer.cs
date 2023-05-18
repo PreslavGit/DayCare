@@ -50,21 +50,24 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.parentsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.parentsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.childrenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.childrenDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.relativesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblPar = new System.Windows.Forms.Label();
             this.lblRel = new System.Windows.Forms.Label();
             this.lblChild = new System.Windows.Forms.Label();
             this.relativesDataGridView = new System.Windows.Forms.DataGridView();
+            this.btn_Excel = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dayCareDataSet)).BeginInit();
@@ -136,7 +139,7 @@
             this.parentsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.parentsBindingNavigator.Name = "parentsBindingNavigator";
             this.parentsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.parentsBindingNavigator.Size = new System.Drawing.Size(732, 25);
+            this.parentsBindingNavigator.Size = new System.Drawing.Size(994, 25);
             this.parentsBindingNavigator.TabIndex = 0;
             this.parentsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -240,21 +243,27 @@
             this.parentsDataGridView.AutoGenerateColumns = false;
             this.parentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.parentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.parentsDataGridView.DataSource = this.parentsBindingSource;
             this.parentsDataGridView.Location = new System.Drawing.Point(32, 57);
             this.parentsDataGridView.Name = "parentsDataGridView";
-            this.parentsDataGridView.Size = new System.Drawing.Size(360, 208);
+            this.parentsDataGridView.Size = new System.Drawing.Size(443, 208);
             this.parentsDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn6
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Име";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Име";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Фамилия";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -278,23 +287,29 @@
             this.childrenDataGridView.AutoGenerateColumns = false;
             this.childrenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.childrenDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn16,
+            this.FirstName,
+            this.LastName,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn13});
             this.childrenDataGridView.DataSource = this.childrenBindingSource;
             this.childrenDataGridView.Location = new System.Drawing.Point(32, 324);
             this.childrenDataGridView.Name = "childrenDataGridView";
-            this.childrenDataGridView.Size = new System.Drawing.Size(547, 220);
+            this.childrenDataGridView.Size = new System.Drawing.Size(766, 220);
             this.childrenDataGridView.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn16
+            // FirstName
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Име";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "Име";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Фамилия";
+            this.LastName.Name = "LastName";
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -308,17 +323,18 @@
             this.dataGridViewTextBoxColumn12.HeaderText = "Клас";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Info";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Информация";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "Meals";
             this.dataGridViewTextBoxColumn14.HeaderText = "Храна";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Info";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Информация";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // relativesBindingSource
             // 
@@ -339,7 +355,7 @@
             // 
             this.lblRel.AutoSize = true;
             this.lblRel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblRel.Location = new System.Drawing.Point(461, 36);
+            this.lblRel.Location = new System.Drawing.Point(508, 36);
             this.lblRel.Name = "lblRel";
             this.lblRel.Size = new System.Drawing.Size(78, 18);
             this.lblRel.TabIndex = 5;
@@ -363,10 +379,22 @@
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20});
             this.relativesDataGridView.DataSource = this.relativesBindingSource;
-            this.relativesDataGridView.Location = new System.Drawing.Point(428, 57);
+            this.relativesDataGridView.Location = new System.Drawing.Point(526, 57);
             this.relativesDataGridView.Name = "relativesDataGridView";
-            this.relativesDataGridView.Size = new System.Drawing.Size(246, 208);
+            this.relativesDataGridView.Size = new System.Drawing.Size(272, 208);
             this.relativesDataGridView.TabIndex = 3;
+            // 
+            // btn_Excel
+            // 
+            this.btn_Excel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_Excel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_Excel.Location = new System.Drawing.Point(867, 494);
+            this.btn_Excel.Name = "btn_Excel";
+            this.btn_Excel.Size = new System.Drawing.Size(100, 50);
+            this.btn_Excel.TabIndex = 7;
+            this.btn_Excel.Text = "Excel";
+            this.btn_Excel.UseVisualStyleBackColor = true;
+            this.btn_Excel.Click += new System.EventHandler(this.btn_Excel_Click);
             // 
             // dataGridViewTextBoxColumn19
             // 
@@ -376,6 +404,7 @@
             // 
             // dataGridViewTextBoxColumn20
             // 
+            this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn20.DataPropertyName = "Phone";
             this.dataGridViewTextBoxColumn20.HeaderText = "Телефон";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
@@ -384,7 +413,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 566);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(994, 566);
+            this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.lblChild);
             this.Controls.Add(this.lblRel);
             this.Controls.Add(this.lblPar);
@@ -392,6 +423,7 @@
             this.Controls.Add(this.childrenDataGridView);
             this.Controls.Add(this.parentsBindingNavigator);
             this.Controls.Add(this.parentsDataGridView);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Data";
             this.Text = "Справка";
             this.Load += new System.EventHandler(this.Data_Load);
@@ -439,15 +471,18 @@
         private System.Windows.Forms.Label lblRel;
         private System.Windows.Forms.Label lblChild;
         private System.Windows.Forms.DataGridView relativesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.Button btn_Excel;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
     }

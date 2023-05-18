@@ -33,11 +33,11 @@
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mealsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ate = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.childrenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dayCareDataSet = new CourseWork.DayCareDataSet();
             this.childrenTableAdapter = new CourseWork.DayCareDataSetTableAdapters.ChildrenTableAdapter();
             this.btnMeal = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgMeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dayCareDataSet)).BeginInit();
@@ -54,9 +54,9 @@
             this.Ate,
             this.id});
             this.dgMeal.DataSource = this.childrenBindingSource;
-            this.dgMeal.Location = new System.Drawing.Point(12, 12);
+            this.dgMeal.Location = new System.Drawing.Point(55, 12);
             this.dgMeal.Name = "dgMeal";
-            this.dgMeal.Size = new System.Drawing.Size(348, 426);
+            this.dgMeal.Size = new System.Drawing.Size(348, 311);
             this.dgMeal.TabIndex = 0;
             // 
             // fullNameDataGridViewTextBoxColumn
@@ -74,8 +74,16 @@
             // 
             // Ate
             // 
-            this.Ate.HeaderText = "Ate";
+            this.Ate.HeaderText = "Ял";
             this.Ate.Name = "Ate";
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // childrenBindingSource
             // 
@@ -93,31 +101,25 @@
             // 
             // btnMeal
             // 
-            this.btnMeal.Location = new System.Drawing.Point(399, 213);
+            this.btnMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnMeal.Location = new System.Drawing.Point(175, 347);
             this.btnMeal.Name = "btnMeal";
-            this.btnMeal.Size = new System.Drawing.Size(89, 26);
+            this.btnMeal.Size = new System.Drawing.Size(113, 53);
             this.btnMeal.TabIndex = 1;
             this.btnMeal.Text = "Отбелязване";
             this.btnMeal.UseVisualStyleBackColor = true;
             this.btnMeal.Click += new System.EventHandler(this.btnMeal_Click);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
             // Meal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(464, 441);
             this.Controls.Add(this.btnMeal);
             this.Controls.Add(this.dgMeal);
             this.Name = "Meal";
-            this.Text = "Meal";
+            this.Text = "Хранения за деня";
             this.Load += new System.EventHandler(this.Meal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgMeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenBindingSource)).EndInit();

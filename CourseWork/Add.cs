@@ -40,8 +40,22 @@ namespace CourseWork
             dayCareDataSet.Relatives.Rows.Add(newRelativeRow);
             relativesTableAdapter.Update(dayCareDataSet.Relatives);
 
+            
+
 
             MessageBox.Show(tb_Parent_Name.Text + " " + tb_Parent_LastName.Text + " беше успешно добавен/a");
+            clearParentsTextBoxes();
+        }
+
+        private void clearParentsTextBoxes()
+        {
+            tb_Parent_Name.Text = "";
+            tb_Parent_LastName.Text = "";
+            tb_Parent_Email.Text = "";
+            tb_Parent_Phone.Text = ""; 
+            tb_Parent_Relative_Relation.Text = "";
+            tb_Parent_Relative_Phone.Text = "";
+
         }
 
         private void form_Add_Parent_Load(object sender, EventArgs e)
@@ -72,10 +86,25 @@ namespace CourseWork
 
 
                 MessageBox.Show(tb_Child_Name.Text + " " + tb_Child_LastName.Text + " беше успешно добавен/a");
+                clearChildrenTextBoxes();
             }
             catch (Exception ex){
                 MessageBox.Show(ex.ToString());
             }
+
+            
         }
+
+        private void clearChildrenTextBoxes()
+        {
+            tb_Child_Name.Text = "";
+            tb_Child_LastName.Text = "";
+            tb_Child_Age.Text = "";
+            tb_Parent_Phone.Text = "";
+            tb_Child_Grade.Text = "";
+            tb_Child_Info.Text = "";
+
+        }
+
     }
 }

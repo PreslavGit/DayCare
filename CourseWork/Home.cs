@@ -17,6 +17,12 @@ namespace CourseWork
             InitializeComponent();
         }
 
+        private void списъкToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ChildrenUpdate childrenUpdate = new ChildrenUpdate();
+            childrenUpdate.MdiParent = this;
+            childrenUpdate.Show();
+        }
         private void addParKids_Click(object sender, EventArgs e)
         {
             form_Add_Parent add = new form_Add_Parent();
@@ -38,27 +44,23 @@ namespace CourseWork
             payFood.MdiParent = this;
             payFood.Show();
         }
-
-        private void Attendeds_Click(object sender, EventArgs e)
+        private void присъствиеПоДниToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Attendance attend = new Attendance();
             attend.MdiParent = this;
             attend.Show();
         }
 
-        private void хранаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void бройХраненияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Meal meal = new Meal(); 
+
+            Meal meal = new Meal();
             meal.MdiParent = this;
             meal.Show();
+
         }
 
-        private void excelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Excel excel = new Excel();  
-            excel.MdiParent = this;
-            excel.Show();
-        }
+       
 
         private void заРодителиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -95,12 +97,15 @@ namespace CourseWork
             searchGradeDate.Show();
         }
 
-        private void децаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-            ChildrenUpdate childrenUpdate = new ChildrenUpdate();
-            childrenUpdate.MdiParent = this;
-            childrenUpdate.Show();
-        }
+            Color floralWhite = Color.FloralWhite;
 
+            int darkerR = (int)(floralWhite.R * 0.9);
+            int darkerG = (int)(floralWhite.G * 0.9);
+            int darkerB = (int)(floralWhite.B * 0.9);
+
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(darkerR, darkerG, darkerB);
+        }
     }
 }

@@ -22,6 +22,8 @@ namespace CourseWork
 
         private void Attendance_Load(object sender, EventArgs e)
         {
+            lbl_Date.Text = DateTime.Now.ToShortDateString().ToString();
+
             DataTable activeMembersTable = new DataTable();
 
             string query = 
@@ -70,7 +72,7 @@ namespace CourseWork
             {
                 try
                 {
-                    if (row.Cells["isPresent"].Value != DBNull.Value &&Convert.ToInt32(row.Cells["isPresent"].Value) == 1)
+                    if (row.Cells["isPresent"].Value != DBNull.Value && Convert.ToInt32(row.Cells["isPresent"].Value) == 1)
                     {
                         SqlCommand cmd = new SqlCommand("INSERT INTO Attendance (ChildID, date) VALUES (@id, @date)", connection);
                         cmd.Parameters.AddWithValue("@id", row.Cells["id"].Value);
@@ -89,6 +91,5 @@ namespace CourseWork
             }
             MessageBox.Show("Всички отбелязани деца бяха успешно добавени");
         }
-
     }
 }

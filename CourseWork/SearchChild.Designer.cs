@@ -42,12 +42,14 @@
             // 
             // cbChildName
             // 
+            this.cbChildName.BackColor = System.Drawing.Color.FloralWhite;
             this.cbChildName.DataSource = this.childrenBindingSource;
             this.cbChildName.DisplayMember = "FullName";
+            this.cbChildName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChildName.FormattingEnabled = true;
-            this.cbChildName.Location = new System.Drawing.Point(40, 42);
+            this.cbChildName.Location = new System.Drawing.Point(40, 55);
             this.cbChildName.Name = "cbChildName";
-            this.cbChildName.Size = new System.Drawing.Size(114, 21);
+            this.cbChildName.Size = new System.Drawing.Size(157, 21);
             this.cbChildName.TabIndex = 0;
             this.cbChildName.TabStop = false;
             this.cbChildName.ValueMember = "id";
@@ -70,9 +72,10 @@
             // lbChildName
             // 
             this.lbChildName.AutoSize = true;
+            this.lbChildName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbChildName.Location = new System.Drawing.Point(37, 26);
             this.lbChildName.Name = "lbChildName";
-            this.lbChildName.Size = new System.Drawing.Size(70, 13);
+            this.lbChildName.Size = new System.Drawing.Size(87, 16);
             this.lbChildName.TabIndex = 1;
             this.lbChildName.Text = "Име на дете";
             // 
@@ -84,19 +87,20 @@
             this.dgChildInfo.Location = new System.Drawing.Point(40, 113);
             this.dgChildInfo.Name = "dgChildInfo";
             this.dgChildInfo.ReadOnly = true;
-            this.dgChildInfo.Size = new System.Drawing.Size(374, 44);
+            this.dgChildInfo.Size = new System.Drawing.Size(374, 103);
             this.dgChildInfo.TabIndex = 2;
             // 
             // SearchChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 450);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(463, 261);
             this.Controls.Add(this.dgChildInfo);
             this.Controls.Add(this.lbChildName);
             this.Controls.Add(this.cbChildName);
             this.Name = "SearchChild";
-            this.Text = "SearchChild";
+            this.Text = "Посещения за последен период";
             this.Load += new System.EventHandler(this.SearchChild_Load);
             ((System.ComponentModel.ISupportInitialize)(this.childrenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dayCareDataSet)).EndInit();

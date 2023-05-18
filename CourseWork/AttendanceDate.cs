@@ -19,12 +19,12 @@ namespace CourseWork
             InitializeComponent();
         }
 
-        private void calAttendData_DateChanged(object sender, DateRangeEventArgs e)
+        private void showData(DateRangeEventArgs e)
         {
             DataTable dt = new DataTable();
 
             string connectionString = ConfigurationManager.ConnectionStrings["CourseWork.Properties.Settings.DayCareConnectionString"].ConnectionString;
-            string query =  "SELECT Children.FirstName + ' ' + Children.LastName as Име FROM Attendance " +
+            string query = "SELECT Children.FirstName + ' ' + Children.LastName as Име FROM Attendance " +
                             "INNER JOIN Children ON Attendance.ChildID = Children.id " +
                             "WHERE Attendance.Date = '" + e.Start.ToString("yyyy-MM-dd") + "'";
 
@@ -35,6 +35,11 @@ namespace CourseWork
             }
             dgAttendData.DataSource = dt;
             dgAttendData.Columns["Име"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void calAttendData_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            showData(e);
         }
     }
 }

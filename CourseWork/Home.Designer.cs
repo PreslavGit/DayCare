@@ -30,22 +30,21 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.AddNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.списъкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addParKids = new System.Windows.Forms.ToolStripMenuItem();
             this.payFT = new System.Windows.Forms.ToolStripMenuItem();
             this.payMember = new System.Windows.Forms.ToolStripMenuItem();
             this.payFoodTrans = new System.Windows.Forms.ToolStripMenuItem();
             this.Attendeds = new System.Windows.Forms.ToolStripMenuItem();
-            this.хранаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.присъствиеПоДниToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.бройХраненияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.заРодителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.присъствияПоДниToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.присъствиеПоДецаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.търсенеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.наДетеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.присъствияПоКласИДатаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.редактиранеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.децаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,11 +55,8 @@
             this.AddNew,
             this.payFT,
             this.Attendeds,
-            this.хранаToolStripMenuItem,
             this.справкиToolStripMenuItem,
-            this.excelToolStripMenuItem,
-            this.търсенеToolStripMenuItem,
-            this.редактиранеToolStripMenuItem});
+            this.търсенеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -71,16 +67,24 @@
             // AddNew
             // 
             this.AddNew.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.списъкToolStripMenuItem,
             this.addParKids});
             this.AddNew.Name = "AddNew";
-            this.AddNew.Size = new System.Drawing.Size(72, 20);
-            this.AddNew.Text = "Добавяне";
+            this.AddNew.Size = new System.Drawing.Size(146, 20);
+            this.AddNew.Text = "Добавяне/Редактиране";
+            // 
+            // списъкToolStripMenuItem
+            // 
+            this.списъкToolStripMenuItem.Name = "списъкToolStripMenuItem";
+            this.списъкToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.списъкToolStripMenuItem.Text = "Списък на децата";
+            this.списъкToolStripMenuItem.Click += new System.EventHandler(this.списъкToolStripMenuItem_Click_1);
             // 
             // addParKids
             // 
             this.addParKids.Name = "addParKids";
-            this.addParKids.Size = new System.Drawing.Size(127, 22);
-            this.addParKids.Text = "Добавяне";
+            this.addParKids.Size = new System.Drawing.Size(170, 22);
+            this.addParKids.Text = "Добавяне ";
             this.addParKids.Click += new System.EventHandler(this.addParKids_Click);
             // 
             // payFT
@@ -95,30 +99,39 @@
             // payMember
             // 
             this.payMember.Name = "payMember";
-            this.payMember.Size = new System.Drawing.Size(170, 22);
+            this.payMember.Size = new System.Drawing.Size(116, 22);
             this.payMember.Text = "Период";
             this.payMember.Click += new System.EventHandler(this.payMember_Click);
             // 
             // payFoodTrans
             // 
             this.payFoodTrans.Name = "payFoodTrans";
-            this.payFoodTrans.Size = new System.Drawing.Size(170, 22);
-            this.payFoodTrans.Text = "Храна/Транспорт";
+            this.payFoodTrans.Size = new System.Drawing.Size(116, 22);
+            this.payFoodTrans.Text = "Храна";
             this.payFoodTrans.Click += new System.EventHandler(this.payFoodTrans_Click);
             // 
             // Attendeds
             // 
+            this.Attendeds.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.присъствиеПоДниToolStripMenuItem,
+            this.бройХраненияToolStripMenuItem});
             this.Attendeds.Name = "Attendeds";
             this.Attendeds.Size = new System.Drawing.Size(132, 20);
             this.Attendeds.Text = "Присъствена форма";
-            this.Attendeds.Click += new System.EventHandler(this.Attendeds_Click);
             // 
-            // хранаToolStripMenuItem
+            // присъствиеПоДниToolStripMenuItem
             // 
-            this.хранаToolStripMenuItem.Name = "хранаToolStripMenuItem";
-            this.хранаToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.хранаToolStripMenuItem.Text = "Храна";
-            this.хранаToolStripMenuItem.Click += new System.EventHandler(this.хранаToolStripMenuItem_Click);
+            this.присъствиеПоДниToolStripMenuItem.Name = "присъствиеПоДниToolStripMenuItem";
+            this.присъствиеПоДниToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.присъствиеПоДниToolStripMenuItem.Text = "Присъствия за деня";
+            this.присъствиеПоДниToolStripMenuItem.Click += new System.EventHandler(this.присъствиеПоДниToolStripMenuItem_Click);
+            // 
+            // бройХраненияToolStripMenuItem
+            // 
+            this.бройХраненияToolStripMenuItem.Name = "бройХраненияToolStripMenuItem";
+            this.бройХраненияToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.бройХраненияToolStripMenuItem.Text = "Хранения за деня";
+            this.бройХраненияToolStripMenuItem.Click += new System.EventHandler(this.бройХраненияToolStripMenuItem_Click);
             // 
             // справкиToolStripMenuItem
             // 
@@ -151,13 +164,6 @@
             this.присъствиеПоДецаToolStripMenuItem.Text = "Присъствия по деца";
             this.присъствиеПоДецаToolStripMenuItem.Click += new System.EventHandler(this.присъствиеПоДецаToolStripMenuItem_Click);
             // 
-            // excelToolStripMenuItem
-            // 
-            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.excelToolStripMenuItem.Text = "Excel";
-            this.excelToolStripMenuItem.Click += new System.EventHandler(this.excelToolStripMenuItem_Click);
-            // 
             // търсенеToolStripMenuItem
             // 
             this.търсенеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -181,32 +187,23 @@
             this.присъствияПоКласИДатаToolStripMenuItem.Text = "Присъствия по клас и дата";
             this.присъствияПоКласИДатаToolStripMenuItem.Click += new System.EventHandler(this.присъствияПоКласИДатаToolStripMenuItem_Click);
             // 
-            // редактиранеToolStripMenuItem
-            // 
-            this.редактиранеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.децаToolStripMenuItem});
-            this.редактиранеToolStripMenuItem.Name = "редактиранеToolStripMenuItem";
-            this.редактиранеToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.редактиранеToolStripMenuItem.Text = "Редактиране";
-            // 
-            // децаToolStripMenuItem
-            // 
-            this.децаToolStripMenuItem.Name = "децаToolStripMenuItem";
-            this.децаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.децаToolStripMenuItem.Text = "Деца";
-            this.децаToolStripMenuItem.Click += new System.EventHandler(this.децаToolStripMenuItem_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1291, 583);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Home";
-            this.Text = "Home";
+            this.Text = "Занималня „Изгрев“";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -222,8 +219,6 @@
         private System.Windows.Forms.ToolStripMenuItem payFoodTrans;
         private System.Windows.Forms.ToolStripMenuItem addParKids;
         private System.Windows.Forms.ToolStripMenuItem Attendeds;
-        private System.Windows.Forms.ToolStripMenuItem хранаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem заРодителиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem присъствияПоДниToolStripMenuItem;
@@ -231,8 +226,9 @@
         private System.Windows.Forms.ToolStripMenuItem търсенеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem наДетеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem присъствияПоКласИДатаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem редактиранеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem децаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem списъкToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem присъствиеПоДниToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem бройХраненияToolStripMenuItem;
     }
 }
 

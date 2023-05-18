@@ -35,7 +35,6 @@ D:\C#\CourseWork\CourseWork\CourseWork\bin\Debug\EPPlus.System.Drawing.dll
 D:\C#\CourseWork\CourseWork\CourseWork\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
 D:\C#\CourseWork\CourseWork\CourseWork\bin\Debug\EPPlus.xml
 D:\C#\CourseWork\CourseWork\CourseWork\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
-D:\C#\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.Excel.resources
 D:\C#\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CopyComplete
 D:\C#\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.AttendanceByChild.resources
 D:\C#\CourseWork\CourseWork\CourseWork\obj\Debug\CourseWork.AttendanceDate.resources

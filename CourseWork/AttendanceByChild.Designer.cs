@@ -34,24 +34,24 @@
             this.childrenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.childrenTableAdapter = new CourseWork.DayCareDataSetTableAdapters.ChildrenTableAdapter();
             this.tableAdapterManager = new CourseWork.DayCareDataSetTableAdapters.TableAdapterManager();
+            this.attendanceTableAdapter = new CourseWork.DayCareDataSetTableAdapters.AttendanceTableAdapter();
             this.childrenBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.childrenDataGridView = new System.Windows.Forms.DataGridView();
-            this.attendanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.attendanceTableAdapter = new CourseWork.DayCareDataSetTableAdapters.AttendanceTableAdapter();
-            this.attendanceDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.attendanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.attendanceDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dayCareDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenBindingSource)).BeginInit();
@@ -86,6 +86,10 @@
             this.tableAdapterManager.RelativesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = CourseWork.DayCareDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // attendanceTableAdapter
+            // 
+            this.attendanceTableAdapter.ClearBeforeFill = true;
+            // 
             // childrenBindingNavigator
             // 
             this.childrenBindingNavigator.AddNewItem = null;
@@ -109,9 +113,16 @@
             this.childrenBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.childrenBindingNavigator.Name = "childrenBindingNavigator";
             this.childrenBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.childrenBindingNavigator.Size = new System.Drawing.Size(812, 25);
+            this.childrenBindingNavigator.Size = new System.Drawing.Size(794, 25);
             this.childrenBindingNavigator.TabIndex = 0;
             this.childrenBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -146,16 +157,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -178,7 +182,7 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // childrenDataGridView
@@ -188,7 +192,7 @@
             this.childrenDataGridView.AutoGenerateColumns = false;
             this.childrenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.childrenDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
+            this.FullName,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
@@ -196,39 +200,15 @@
             this.childrenDataGridView.Location = new System.Drawing.Point(12, 47);
             this.childrenDataGridView.Name = "childrenDataGridView";
             this.childrenDataGridView.ReadOnly = true;
-            this.childrenDataGridView.Size = new System.Drawing.Size(580, 253);
+            this.childrenDataGridView.Size = new System.Drawing.Size(580, 351);
             this.childrenDataGridView.TabIndex = 1;
             // 
-            // attendanceBindingSource
+            // FullName
             // 
-            this.attendanceBindingSource.DataMember = "FK__Attendanc__Child__71D1E811";
-            this.attendanceBindingSource.DataSource = this.childrenBindingSource;
-            // 
-            // attendanceTableAdapter
-            // 
-            this.attendanceTableAdapter.ClearBeforeFill = true;
-            // 
-            // attendanceDataGridView
-            // 
-            this.attendanceDataGridView.AllowUserToAddRows = false;
-            this.attendanceDataGridView.AllowUserToDeleteRows = false;
-            this.attendanceDataGridView.AutoGenerateColumns = false;
-            this.attendanceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.attendanceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn11});
-            this.attendanceDataGridView.DataSource = this.attendanceBindingSource;
-            this.attendanceDataGridView.Location = new System.Drawing.Point(625, 47);
-            this.attendanceDataGridView.Name = "attendanceDataGridView";
-            this.attendanceDataGridView.ReadOnly = true;
-            this.attendanceDataGridView.Size = new System.Drawing.Size(144, 253);
-            this.attendanceDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn9.HeaderText = "FullName";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "FullName";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -252,6 +232,26 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
+            // attendanceBindingSource
+            // 
+            this.attendanceBindingSource.DataMember = "FK__Attendanc__Child__71D1E811";
+            this.attendanceBindingSource.DataSource = this.childrenBindingSource;
+            // 
+            // attendanceDataGridView
+            // 
+            this.attendanceDataGridView.AllowUserToAddRows = false;
+            this.attendanceDataGridView.AllowUserToDeleteRows = false;
+            this.attendanceDataGridView.AutoGenerateColumns = false;
+            this.attendanceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.attendanceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11});
+            this.attendanceDataGridView.DataSource = this.attendanceBindingSource;
+            this.attendanceDataGridView.Location = new System.Drawing.Point(625, 47);
+            this.attendanceDataGridView.Name = "attendanceDataGridView";
+            this.attendanceDataGridView.ReadOnly = true;
+            this.attendanceDataGridView.Size = new System.Drawing.Size(144, 351);
+            this.attendanceDataGridView.TabIndex = 2;
+            // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -264,12 +264,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 359);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(794, 441);
             this.Controls.Add(this.attendanceDataGridView);
             this.Controls.Add(this.childrenDataGridView);
             this.Controls.Add(this.childrenBindingNavigator);
             this.Name = "AttendanceByChild";
-            this.Text = "AttendanceByChild";
+            this.Text = "Присъствия по деца";
             this.Load += new System.EventHandler(this.AttendanceByChild_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dayCareDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenBindingSource)).EndInit();
@@ -304,10 +305,10 @@
         private DayCareDataSetTableAdapters.AttendanceTableAdapter attendanceTableAdapter;
         private System.Windows.Forms.BindingSource attendanceBindingSource;
         private System.Windows.Forms.DataGridView attendanceDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
     }
 }
